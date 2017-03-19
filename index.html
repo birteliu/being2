@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/lss" href="less/being2.less" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/hover-min.css" media="screen">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <!-- js -->
+    <script>
+    less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false,
+        rootpath: ":/a.com/"
+    };
+    </script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script>
+    $(document).ready(function() {
+        if (Modernizr.touch) {
+            // show the close overlay button
+            $(".close-overlay").removeClass("hidden");
+            // handle the adding of hover class when clicked
+            $(".img").click(function(e) {
+                if (!$(this).hasClass("hover")) {
+                    $(this).addClass("hover");
+                }
+            });
+            // handle the closing of the overlay
+            $(".close-overlay").click(function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if ($(this).closest(".img").hasClass("hover")) {
+                    $(this).closest(".img").removeClass("hover");
+                }
+            });
+        } else {
+            // handle the mouseenter functionality
+            $(".img").mouseenter(function() {
+                    $(this).addClass("hover");
+                })
+                // handle the mouseleave functionality
+                .mouseleave(function() {
+                    $(this).removeClass("hover");
+                });
+        }
+    });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fuild">
+        <div class="row">
+            <div class="col-xs-12 header-content">
+                <!-- <img src="img/Logo.jpg" alt="" class="img-responsive header-logo"> -->
+                <h4 class="header-title ta-c">NSYSU Being2</h4>
+            </div>
+            <nav class="">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">導覽列開關</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="" class="navbar-brand">NSYSU BEing2</a>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="" title="">Member</a></li>
+                        <li><a href="" title="">Activities</a></li>
+                        <li><a href="" title="">LAB Tours</a></li>
+                        <li><a href="" title="">NEWs</a></li>
+                        <li><a href="" title="">Research</a></li>
+                        <li><a href="" title="">Visitors</a></li>
+                        <li><a href="" title="">Conferences</a></li>
+                        <li><a href="" title="">Equipment</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="col-xs-12 banner-pic">
+                <div id="effect-1" class="effects clearfix">
+                    <div class="img">
+                        <img src="img/being2-banner.jpg" alt="" class="img-responsive">
+                        <div class="overlay">
+                            <div class="banner-text">
+                                <p class="banner-title">BEing2 ( <span class="abbrev">B</span>iomimick<span class="abbrev">ing</span> & <span class="abbrev">E</span>ngineer<span class="abbrev">ing</span> ) Lab</p>
+                                <p class="banner-second">Department of Mechanical and Electromechanical Engineering</p>
+                                <p class="banner-third">National Sun Yat-sen University ( NSYSU )</p>
+                            </div>
+                        </div>
+                        <div class="mobile-text">
+                            <h6><span class="abbrev">BEing2</span> ( <span class="abbrev">B</span>iomimick<span class="abbrev">ing</span> & <span class="abbrev">E</span>ngineer<span class="abbrev">ing</span> Lab )</h6>
+                            <div class="line"></div>
+                            <p>Department of Mechanical and Electromechanical Engineering
+                                <br>National Sun Yat-sen University ( NSYSU )</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle-content">
+            <div class="col-sm-4 col-xs-12 pt1">
+                <h4 class="section-left-title">Welcome to BEing2 lab</h4>
+                <img src="img/Logo.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="col-sm-8 col-xs-12 section-right pt1">
+                <div class="animate-text-content no-hover">
+                    <h4 class="section-right-title">NEWs<span class="animate-line"></span></h4>
+                </div>
+                <div class="news-article pt1">
+                    <div class="pt1">
+                        <a href="">
+                            <h4 class="f-bold">2017/03/03</h4>
+                            <p>Welcome party in CHATEAU de CHINE</p>
+                        </a>
+                        <div class="article-line"></div>
+                    </div>
+                    <div class="pt1">
+                        <a href="">
+                            <h4 class="f-bold">2017/02/28</h4>
+                            <p>New PhD student Mr. Mano</p>
+                        </a>
+                        <div class="article-line"></div>
+                    </div>
+                    <div class="pt1">
+                        <a href="">
+                            <h4 class="f-bold">2017/02/21</h4>
+                            <p>Visitor Prof. Eiji Nakamachi, Biomedical Engineering, Doshisha University, JP</p>
+                        </a>
+                        <div class="article-line"></div>
+                    </div>
+                    <div class="pt1">
+                        <a href="">
+                            <h4 class="f-bold">2017/01/14</h4>
+                            <p>台灣恩智浦半導體50周年慶</p>
+                        </a>
+                        <div class="article-line"></div>
+                    </div>
+                    <div class="read-more pb2">
+                        <a href="">+ Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="col-xs-12 footer-info pd2">
+                <div class="col-sm-6">
+                    <h4>About Us</h4>
+                    <p>國立中山大學 機械與機電工程學系 仿生實驗室</p>
+                    <p>PI in Being 2 ( Biom imiccking & Engineering ) Lab
+                        <br> National Sun Yat - Sen University
+                        <br> Department of Mechanical and Electromechanical engineering</p>
+                </div>
+                <div class="col-sm-6">
+                    <h4>Contect Us</h4>
+                    <p>+886 7 5252 000 ext. 4263 ( 實驗室 LAB )</p>
+                    <p>804 高雄市鼓山區蓮海路 70 號中山大學機電大樓一樓 EN1022
+                        <br> 1F Room EN1022, Mechanical and electro-mechanical building, No.70, Lianhai Rd., Gushan Dist., Kaohsiung City 804, Taiwan (R.O.C.)</p>
+                </div>
+            </div>
+            <div class="col-xs-12 footer-copyright">
+                <p class="pt1">© 2017 by Birteliu</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
